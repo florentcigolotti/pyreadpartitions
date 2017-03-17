@@ -408,7 +408,7 @@ def get_disk_partitions_info(disk):
 
 def show_disk_partitions_info(diskOrInfo):
   fileUsed = None
-  if isinstance(diskOrInfo, basestring):
+  if isinstance(diskOrInfo, str):
     fileUsed = diskOrInfo = open(diskOrInfo, 'rb')
   if hasattr(diskOrInfo, 'read'):
     info = get_disk_partitions_info(diskOrInfo)
